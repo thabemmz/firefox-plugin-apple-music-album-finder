@@ -1,6 +1,14 @@
 {
   "manifest_version": 3,
   "name": "Apple Music Album Finder",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "apple-music-album-finder@bmml.dev",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  },
   "version": "1.0.0",
   "description": "Detect albums on music review pages and open them directly in Apple Music.",
   "icons": {
