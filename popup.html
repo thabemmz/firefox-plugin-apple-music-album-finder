@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <!-- Scanning state -->
+  <div id="state-scanning" class="state">
+    <div class="spinner"></div>
+    <p>Detecting album...</p>
+  </div>
+
+  <!-- Found state -->
+  <div id="state-found" class="state hidden">
+    <img id="artwork" alt="Album artwork" width="120" height="120">
+    <div class="info">
+      <p id="album-name" class="album"></p>
+      <p id="artist-name" class="artist"></p>
+    </div>
+    <button id="open-btn" class="btn">
+      Open in Apple Music
+    </button>
+  </div>
+
+  <!-- Not found state -->
+  <div id="state-not-found" class="state hidden">
+    <p class="error-msg">No album detected on this page.</p>
+    <div class="manual-search">
+      <input id="manual-input" type="text" placeholder="Artist - Album">
+      <button id="manual-btn" class="btn btn-small">Search</button>
+    </div>
+  </div>
+
+  <!-- Error state -->
+  <div id="state-error" class="state hidden">
+    <p id="error-text" class="error-msg"></p>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
